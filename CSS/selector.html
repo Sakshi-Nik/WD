@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Selectors Example Centered</title>
+    <style>
+        /* Universal selector */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        /* Element selector */
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        /* Center container using margin (alternative: flex is used here) */
+        .container {
+            background: white;
+            width: 80%;
+            max-width: 600px;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+            margin: auto; /* extra margin:auto if not using flex */
+        }
+
+        /* ID selector */
+        #header {
+            background-color: #4CAF50;
+            color: white;
+            padding: 15px;
+            text-align: center;
+            border-radius: 8px 8px 0 0;
+        }
+
+        /* Class selector */
+        .intro {
+            font-size: 18px;
+            margin: 15px;
+            color: #333;
+        }
+
+        /* Group selector */
+        h1, h2, h3 {
+            margin-bottom: 10px;
+        }
+
+        /* Descendant selector */
+        .content p {
+            color: #555;
+        }
+
+        /* Child selector */
+        .list > li {
+            list-style: square;
+            color: #444;
+        }
+
+        /* Adjacent sibling selector */
+        h2 + p {
+            font-style: italic;
+        }
+
+        /* General sibling selector */
+        h3 ~ p {
+            background-color: #eee;
+            padding: 5px;
+        }
+
+        /* Attribute selector */
+        a[target="_blank"] {
+            color: red;
+        }
+
+        /* Pseudo-class selector */
+        a:hover {
+            text-decoration: underline;
+        }
+
+        /* Pseudo-element selector */
+        p::first-letter {
+            font-size: 200%;
+            color: blue;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <div id="header">
+            <h1>Page Using selectors</h1>
+        </div>
+
+        <p class="intro">This is an introductory paragraph styled with a class selector.</p>
+
+        <div class="content">
+            <h2>Content Section</h2>
+            <p>This paragraph is inside a content div (descendant selector).</p>
+            <p>Another paragraph in content div.</p>
+        </div>
+
+        <h2>Following Content</h2>
+        <p>This paragraph is an adjacent sibling of h2.</p>
+
+        <h3>Subsection</h3>
+        <p>This paragraph is a general sibling of h3.</p>
+        <p>Another general sibling of h3.</p>
+
+        <ul class="list">
+            <li>First item (child selector)</li>
+            <li>Second item (child selector)</li>
+        </ul>
+
+        
+    </div>
+
+</body>
+</html>
